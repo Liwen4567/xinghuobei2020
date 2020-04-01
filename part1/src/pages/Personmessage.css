@@ -1,0 +1,372 @@
+/*css*/
+
+* { padding: 0; margin: 0; font-family: Adobe 黑体 Std; }
+li { list-style: none; }
+img { border: none; }
+a { text-decoration: none; cursor: pointer; }
+a:hover { text-decoration: none}
+button { border: none;}
+::-webkit-scrollbar {display:none}
+
+
+#personmessage {
+    width: 100%;
+    height: 100%;
+
+}
+#personmessage_bg {
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    margin-left: -512px;
+    width: 1024px;
+    height: 576px;
+    background: url(../img/home_bg.png) no-repeat;
+}
+.personmessage_head {
+    position: relative;
+    width: 100%;
+    height: 37px;
+    border-bottom: 1px solid #0000ff; 
+}
+.personmessage_head_a1 {
+    color: #02090c;
+    font-size: 13.5px;
+    line-height: 37px;
+    position: absolute;
+    left: 165px;
+}
+.personmessage_head_a2 {
+    color: #0000ff;
+    font-size: 13.5px;
+    line-height: 37px;
+    position: absolute;
+    left: 273px;
+}
+.personmessage_head_a3 {
+    color: #02090c;
+    font-size: 13.5px;
+    line-height: 37px;
+    position: absolute;
+    left: 429px;
+}
+.personmessage_head_a4 {
+    color: #02090c;
+    font-size: 13.5px;
+    line-height: 37px;
+    position: absolute;
+    right: 73px;
+}
+#personmessage_message {
+    position: absolute;
+    left: 0px;
+    top: 37px;
+    width: 746px;
+    height: 538px;
+    border-right: 1px solid #0000ff;
+}
+.personmessage_userimg {
+    position: absolute;
+    top: 47px;
+    left: 117px;
+    height: 57px;
+    width: 57px;
+    border-radius: 50%;
+    border: 1px solid #0000ff;
+    background-color: #fff;
+    background-position: center center;
+    background-size:100% 100%;
+}
+#personmessage_message p {
+    font-size: 12px;
+    color: #020405;
+}
+.personmessage_p1 {
+    position: absolute;
+    left: 208px;
+    top: 57px;
+}
+.personmessage_p2 {
+    position: absolute;
+    left: 208px;
+    top: 86px;
+}
+.personmessage_p3 {
+    font-size: 14px;
+    position: absolute;
+    left: 111px;
+    top: 126px;
+}
+.personmessage_p4 {
+    position: absolute;
+    left: 111px;
+    top: 157px;
+}
+.personmessage_p5 {
+    position: absolute;
+    left: 111px;
+    top: 179px;
+}
+.personmessage_p6 {
+    position: absolute;
+    left: 111px;
+    top: 202px;
+}
+.personmessage_p7 {
+    position: absolute;
+    left: 111px;
+    top: 222px;
+}
+.personmessage_p8 {
+    position: absolute;
+    left: 111px;
+    top: 243px;
+}
+.personmessage_changrmessage {
+    position: absolute;
+    width: 180px;
+    height: 21px;
+    top: 279px;
+    left: 111px;
+    background-color: transparent;
+    border: 2px solid #b5ddea;
+    font-size: 12px;
+    line-height: 12px;
+    cursor: pointer;
+}
+.personmessage_quit {
+    position: absolute;
+    width: 180px;
+    height: 21px;
+    top: 310px;
+    left: 111px;
+    background-color: transparent;
+    border: 2px solid #b5ddea;
+    font-size: 12px;
+    line-height: 12px;
+    cursor: pointer;
+}
+.personmessage_cancel {
+    position: absolute;
+    width: 68px;
+    height: 21px;
+    top: 343px;
+    left: 111px;
+    background-color: transparent;
+    border: 2px solid #b5ddea;
+    font-size: 12px;
+    line-height: 12px;
+    cursor: pointer;
+}
+.personmessage_changepsw {
+    position: absolute;
+    width: 99px;
+    height: 21px;
+    top: 343px;
+    left: 192px;
+    background-color: transparent;
+    border: 2px solid #b5ddea;
+    font-size: 12px;
+    line-height: 12px;
+    cursor: pointer;
+}
+#personmessage_message textarea{
+    width: 321px;
+    height: 145px;
+    border: 2px solid #b5ddea;
+    position: absolute;
+    left: 367px;
+    top: 132px;
+    padding: 10px;
+    background-color: transparent;
+}
+.personmessage_changecolor {
+    position: absolute;
+    left: 367px;
+    top: 343px;
+    height: 21px;
+    width: 345px;
+    background-color: transparent;
+    border: 2px solid #b5ddea;
+    font-size: 12px;
+    line-height: 12px;
+    cursor: pointer;
+}
+#personmessage_message img {
+    position: absolute;
+    top: 88px;
+    left: 375px;
+    z-index: 10;
+}
+#personmessage_photo div{
+    position: absolute;
+    right: 14px;
+    top: 100px;
+    background: no-repeat;
+    width: 250px;
+    height: 250px;
+    background-position: center center;
+    transition: all 1s ease-in;
+    opacity: 0;
+}
+#personmessage_photo .personmessage_photo0 {
+    opacity: 1;
+}
+#changepsw {
+    display: none;
+    height: 580px;
+    width: 1020px;
+    position: absolute;
+    left: 50%;
+    margin-left: -510px;
+    background-color: #fff;
+    background: rgba(255, 255, 255, 0.4);
+    z-index: 100;
+}
+.changepsw_body {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -150px;
+    margin-left: -150px;
+    background-color: #ffff;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+}
+.changepsw_body_p1 {
+    position: absolute;
+    left: 50px;
+    top: 20px;
+}
+.changepsw_body_input1 {
+    width: 200px;
+    height: 20px;
+    position: absolute;
+    line-height: 20px;
+    left: 50px;
+    top: 42px;
+}
+.changepsw_body_p2 {
+    position: absolute;
+    left: 50px;
+    top: 80px;
+}
+.changepsw_body_input2 {
+    width: 200px;
+    height: 20px;
+    position: absolute;
+    line-height: 20px;
+    left: 50px;
+    top: 102px;
+}
+.changepsw_body_p3 {
+    position: absolute;
+    left: 50px;
+    top: 140px;
+}
+.changepsw_body_input3 {
+    width: 200px;
+    height: 20px;
+    position: absolute;
+    line-height: 20px;
+    left: 50px;
+    top: 162px;
+}
+.changepsw_body_btn2 {
+    width: 70px;
+    height: 30px;
+    position: absolute;
+    line-height: 20px;
+    left: 60px;
+    top: 200px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    color: #c2c2c2;
+    border: 1px solid #c2c2c2;
+    cursor: pointer;
+}
+.changepsw_body_btn1 {
+    width: 70px;
+    height: 30px;
+    position: absolute;
+    line-height: 20px;
+    right: 60px;
+    top: 200px;
+    background-color: #1d91ff;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+}
+#personmessage_change {
+    display: none;
+    height: 580px;
+    width: 1020px;
+    position: absolute;
+    left: 50%;
+    margin-left: -510px;
+    background-color: #fff;
+    background: rgba(255, 255, 255, 0.4);
+    z-index: 100;
+}
+.personmessage_change_body {
+    width: 350px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -150px;
+    margin-left: -150px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow-y: auto;
+    border: 1px solid #e0e0e0;
+}
+.personmessage_change_body p {
+    font-size: 14px;
+    padding-left: 50px;
+    padding-top: 10px;
+}
+.personmessage_change_body input {
+    border-radius: 10px;
+    width: 250px;
+    height: 25px;
+    margin-left: 50px;
+    margin-top: 5px;
+    border: 1px solid #c2c2c2;
+}
+.personmessage_change_body .personmessage_change_body_input1_a, .personmessage_change_body .personmessage_change_body_input1_b {
+   width: 15px;
+   height: 15px;
+   font-size: 12px;
+}
+.personmessage_change_body textarea {
+    border-radius: 10px;
+    width: 250px;
+    height: 70px;
+    margin-left: 50px;
+    margin-top: 5px;
+    border: 1px solid #c2c2c2;
+}
+.personmessage_change_body_btn1 {
+    width: 70px;
+    height: 30px;
+    background-color: #fff;
+    margin-left: 80px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #c2c2c2;
+    color: #c2c2c2;
+}
+.personmessage_change_body_btn2 {
+    width: 70px;
+    height: 30px;
+    background-color: #1d91ff;
+    margin-left: 50px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+}
