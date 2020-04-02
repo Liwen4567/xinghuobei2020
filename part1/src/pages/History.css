@@ -1,0 +1,221 @@
+/*css*/
+
+* { padding: 0; margin: 0; font-family: Adobe 黑体 Std; }
+li { list-style: none; }
+img { border: none; }
+a { text-decoration: none; cursor: pointer; }
+a:hover { text-decoration: none}
+button { border: none;}
+::-webkit-scrollbar {display:none}
+
+
+#history {
+    width: 100%;
+    height: 100%;
+
+}
+#history_bg {
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    margin-left: -512px;
+    width: 1024px;
+    height: 576px;
+    background: url(../img/home_bg.png) no-repeat;
+}
+.history_head {
+    position: relative;
+    width: 100%;
+    height: 37px;
+    border-bottom: 1px solid #0000ff; 
+}
+.history_head_a1 {
+    color: #02090c;
+    font-size: 13.5px;
+    line-height: 37px;
+    position: absolute;
+    left: 165px;
+}
+.history_head_a2 {
+    color: #02090c;
+    font-size: 13.5px;
+    line-height: 37px;
+    position: absolute;
+    left: 273px;
+}
+.history_head_a3 {
+    color: #0000ff;
+    font-size: 13.5px;
+    line-height: 37px;
+    position: absolute;
+    left: 429px;
+}
+.history_head_a4 {
+    color: #02090c;
+    font-size: 13.5px;
+    line-height: 37px;
+    position: absolute;
+    right: 73px;
+}
+.history_personmessage {
+    position: absolute;
+    left: 0px;
+    top: 37px;
+    width: 242px;
+    height: 538px;
+    border-right: 1px solid #0000ff;
+}
+.history_userimg {
+    position: absolute;
+    top: 40px;
+    left: 93px;
+    height: 57px;
+    width: 57px;
+    border-radius: 50%;
+    border: 1px solid #0000ff;
+    background-color: #fff;
+    background-position: center center;
+    background-size:100% 100%;
+}
+.history_username {
+    margin-top: 120px;
+    text-align: center;
+    font-size: 14px;
+}
+.history_usertag {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+.history_personmessage img {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+.history_mycollect {
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    margin-left: -100px;
+    width: 200px;
+    height: 50px;
+    border: 1px solid #a5a5a5;
+    border-radius: 10px;
+    background: transparent no-repeat;
+    background-position: center center;
+    cursor: pointer;
+    font-size: 18px;
+}
+.history_write {
+    position: absolute;
+    top: 240px;
+    left: 50%;
+    margin-left: -100px;
+    width: 200px;
+    height: 50px;
+    border: 1px solid #a5a5a5;
+    border-radius: 10px;
+    background: #fff no-repeat;
+    background-image: url(../img/hirtory_add.png);
+    background-position: center center;
+    cursor: pointer;
+}
+.history_choose {
+    position: absolute;
+    left: 242px;
+    top: 38px;
+    width: 90px;
+    height: 322px;
+    border-right: 1px solid #0000ff;
+    border-left: 1px solid #0000ff;
+    border-bottom: 1px solid #0000ff;
+}
+.history_choose li {
+    box-sizing: border-box;
+    width: 90px;
+    height: 46px;
+    font-size: 13.5px;
+    color: #02090c;
+    padding-left: 16px;
+    line-height: 46px;
+    cursor: pointer;
+}
+.history_body {
+    position: absolute;
+    top: 37px;
+    right: 20px;
+    width: 600px;
+    height: 500px;
+}
+.history_body ul{
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    height: 460px;
+    overflow-y: auto;
+}
+
+
+.history_body ul li {
+    width: 100%;
+    height: 89px;
+    margin-bottom: 8px;
+    position: relative;
+    background-color: #f8eee8;
+    cursor: pointer;
+}
+.history_diary_userimg {
+    position: absolute;
+    left: 14px;
+    top: 6px;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #2996fe;
+    border-radius: 50%;
+    background-color: #fff;
+    background-position: center center;
+    background-size:100% 100%;
+    overflow: hidden;
+}
+.history_diary_username {
+    position: absolute;
+    top: 15px;
+    left: 65px;
+    font-size: 9px;
+    color: #010000;
+}
+.history_diary_time {
+    position: absolute;
+    top: 14px;
+    left: 126px;
+    font-size: 9px;
+    color: #010000;
+}
+.history_diary_value {
+    position: absolute;
+    top: 35px;
+    left: 85px;
+    font-size: 10.5px;
+    color: #010000;
+    display: block;
+    width: 424px;
+    height: 26px;
+    overflow: hidden;
+}
+.history_diary_islike {
+    position: absolute;
+    bottom: 0px;
+    right: 60px;
+    cursor: pointer;
+}
+.history_diary_iscollect {
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+    cursor: pointer;
+}
+.history_logo {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
