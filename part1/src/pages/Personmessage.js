@@ -210,26 +210,26 @@ class Personmessage extends Component {
         let This = this
 
         //照片墙轮换
-        let Length = This.state.userphoto.length
-        let i = 0
-        let photoes = document.querySelector("#personmessage_photo").childNodes
-        try {
-            clearInterval(time)
-        } catch{
+        // let Length = This.state.userphoto.length
+        // let i = 0
+        // let photoes = document.querySelector("#personmessage_photo").childNodes
+        // try {
+        //     clearInterval(time)
+        // } catch{
 
-        }
-        let time = setInterval(() => {
-            if (i >= Length) {
-                i = 0
-            }
-            photoes[i].style.opacity = 0
-            if (i >= Length - 1) {
-                i = -1
-            }
-            photoes[i + 1].style.opacity = 1
-            i++
+        // }
+        // let time = setInterval(() => {
+        //     if (i >= Length) {
+        //         i = 0
+        //     }
+        //     photoes[i].style.opacity = 0
+        //     if (i >= Length - 1) {
+        //         i = -1
+        //     }
+        //     photoes[i + 1].style.opacity = 1
+        //     i++
 
-        }, 4000)
+        // }, 4000)
     }
 
     changePsw() {

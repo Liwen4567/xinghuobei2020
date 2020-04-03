@@ -68,7 +68,7 @@ button { border: none;}
 .personmessage_userimg {
     position: absolute;
     top: 47px;
-    left: 117px;
+    left: 87px;
     height: 57px;
     width: 57px;
     border-radius: 50%;
@@ -83,43 +83,43 @@ button { border: none;}
 }
 .personmessage_p1 {
     position: absolute;
-    left: 208px;
+    left: 178px;
     top: 57px;
 }
 .personmessage_p2 {
     position: absolute;
-    left: 208px;
+    left: 178px;
     top: 86px;
 }
 .personmessage_p3 {
     font-size: 14px;
     position: absolute;
-    left: 111px;
+    left: 81px;
     top: 126px;
 }
 .personmessage_p4 {
     position: absolute;
-    left: 111px;
+    left: 81px;
     top: 157px;
 }
 .personmessage_p5 {
     position: absolute;
-    left: 111px;
+    left: 81px;
     top: 179px;
 }
 .personmessage_p6 {
     position: absolute;
-    left: 111px;
+    left: 81px;
     top: 202px;
 }
 .personmessage_p7 {
     position: absolute;
-    left: 111px;
+    left: 81px;
     top: 222px;
 }
 .personmessage_p8 {
     position: absolute;
-    left: 111px;
+    left: 81px;
     top: 243px;
 }
 .personmessage_changrmessage {
@@ -127,7 +127,7 @@ button { border: none;}
     width: 180px;
     height: 21px;
     top: 279px;
-    left: 111px;
+    left: 81px;
     background-color: transparent;
     border: 2px solid #b5ddea;
     font-size: 12px;
@@ -139,7 +139,7 @@ button { border: none;}
     width: 180px;
     height: 21px;
     top: 310px;
-    left: 111px;
+    left: 81px;
     background-color: transparent;
     border: 2px solid #b5ddea;
     font-size: 12px;
@@ -151,7 +151,7 @@ button { border: none;}
     width: 68px;
     height: 21px;
     top: 343px;
-    left: 111px;
+    left: 81px;
     background-color: transparent;
     border: 2px solid #b5ddea;
     font-size: 12px;
@@ -163,7 +163,7 @@ button { border: none;}
     width: 99px;
     height: 21px;
     top: 343px;
-    left: 192px;
+    left: 162px;
     background-color: transparent;
     border: 2px solid #b5ddea;
     font-size: 12px;
@@ -175,17 +175,17 @@ button { border: none;}
     height: 145px;
     border: 2px solid #b5ddea;
     position: absolute;
-    left: 367px;
+    left: 337px;
     top: 132px;
     padding: 10px;
     background-color: transparent;
 }
 .personmessage_changecolor {
     position: absolute;
-    left: 367px;
+    left: 337px;
     top: 343px;
     height: 21px;
-    width: 345px;
+    width: 320px;
     background-color: transparent;
     border: 2px solid #b5ddea;
     font-size: 12px;
@@ -195,23 +195,25 @@ button { border: none;}
 #personmessage_message img {
     position: absolute;
     top: 88px;
-    left: 375px;
+    left: 340px;
     z-index: 10;
 }
-#personmessage_photo div{
+#personmessage_photo {
     position: absolute;
-    right: 14px;
-    top: 100px;
+    right: 0px;
+    width: 265px;
+    height: 539px;
+    overflow-y: auto;
+}
+#personmessage_photo div{
     background: no-repeat;
     width: 250px;
-    height: 250px;
+    height: 200px;
     background-position: center center;
-    transition: all 1s ease-in;
-    opacity: 0;
+    margin-bottom: 10px;
+
 }
-#personmessage_photo .personmessage_photo0 {
-    opacity: 1;
-}
+
 #changepsw {
     display: none;
     height: 580px;

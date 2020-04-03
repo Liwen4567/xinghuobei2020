@@ -5,39 +5,39 @@ import part4_logo1 from '../img/part4_logo1.png'
 import part4_logo2 from '../img/part4_logo2.png'
 
 class Part4 extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-            this.state={
-                part4_historyvalue:[
-                    "捷克斯洛伐克","黑暗深邃幻想","^_^","凸(艹皿艹 )","┌(。Д。)┐","Thanks♪(･ω･)ﾉ","淦淦淦"
-                ],
-                part4_historyid:[
-                "1","2","3","4","5","6"
-                ],
-                part4_hotvalue:[
-                    "捷克斯洛伐克","黑暗深邃幻想","^_^","凸(艹皿艹 )","┌(。Д。)┐","Thanks♪(･ω･)ﾉ","淦淦淦"
-                ],
-                part4_hotid:[
-                "1","2","3","4","5","6"
-                ],
-            }
+        this.state = {
+            part4_historyvalue: [
+                "捷克斯洛伐克", "黑暗深邃幻想", "^_^", "凸(艹皿艹 )", "┌(。Д。)┐", "Thanks♪(･ω･)ﾉ", "淦淦淦"
+            ],
+            part4_historyid: [
+                "1", "2", "3", "4", "5", "6"
+            ],
+            part4_hotvalue: [
+                "捷克斯洛伐克", "黑暗深邃幻想", "^_^", "凸(艹皿艹 )", "┌(。Д。)┐", "Thanks♪(･ω･)ﾉ", "淦淦淦"
+            ],
+            part4_hotid: [
+                "1", "2", "3", "4", "5", "6"
+            ],
+        }
     }
-    render() { 
-        return (  
+    render() {
+        return (
             <div id="part4">
                 <div id="part4_bg">
                     <div className="part4_head">
-                    <Link to="/pages/Home"><a className="part4_head_a1">主页</a></Link>
-                    <Link to="/pages/Personmessage"><a className="part4_head_a2">个人信息</a></Link>
-                    <Link to="/pages/History"><a className="part4_head_a3">日迹</a></Link>
-                    <Link to="/"><a className="part4_head_a4">退出</a></Link>
+                        <Link to="/pages/Home"><a className="part4_head_a1">主页</a></Link>
+                        <Link to="/pages/Personmessage"><a className="part4_head_a2">个人信息</a></Link>
+                        <Link to="/pages/History"><a className="part4_head_a3">日迹</a></Link>
+                        <Link to="/"><a className="part4_head_a4">退出</a></Link>
                     </div>
                     <img className="part4_logo1" src={part4_logo1} />
                     <div className="part4_body">
                         <div className="part4_body_top">
-                            <div style={{position:"absolute",left:"60px",zIndex:"10"}}>
-                                <div className="chooseType" onClick={this.chooseType.bind(this)}>
-                                    <input type="text" value="  选择日记类型" className="chooseType_input" readOnly="readonly"/>
+                            <div style={{ position: "absolute", left: "60px", zIndex: "10" }}>
+                                {/* <div className="chooseType" onClick={this.chooseType.bind(this)}>
+                                    <input type="text" value="  选择日记类型" className="chooseType_input" readOnly="readonly" />
                                     <div className="chooseType_div1"></div>
                                     <div className="chooseType_div2"></div>
                                 </div>
@@ -62,18 +62,28 @@ class Part4 extends Component {
                                             <p className="diary_type_p">其他</p>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> */}
                             </div>
-                            <button className="part4_body_top_choosepic">上传图片</button>
+                            <input className="chooseType_input" type="text" list="part4_body_type" placeholder="请选择日记种类" />
+                            <datalist id="part4_body_type">
+                                <option value="校园"></option>
+                                <option value="情感"></option>
+                                <option value="旅途"></option>
+                                <option value="求职"></option>
+                                <option value="美食"></option>
+                                <option value="其他"></option>
+                            </datalist>
+                            <button className="part4_body_top_choosepic" onClick={this.part4Chooseimg.bind(this)}>上传图片</button>
+                            <input className="part4_chooseimg" type="file" accept="image/*" style={{display: "none"}}/>
                         </div>
-                        <div className="part4_body_body" style={{zIndex:"1"}}>
+                        <div className="part4_body_body" style={{ zIndex: "1" }}>
                             <textarea className="diary_text" placeholder="    开始日记吧..." type="file"></textarea>
                         </div>
                         <div className="part4_body_bottom">
                             <button className="part4_body_bottom_submit">发布日记</button>
-                            <div style={{position:"absolute",left:"490px",top:"408px"}}>
-                                <div className="chooseState" onClick={this.chooseState.bind(this)}>
-                                    <input type="text" value="  日记权限" className="chooseState_input" readOnly="readonly"/>
+                            <div style={{ position: "absolute", left: "490px", top: "408px" }}>
+                                {/* <div className="chooseState" onClick={this.chooseState.bind(this)}>
+                                    <input type="text" value="  日记权限" className="chooseState_input" readOnly="readonly" />
                                     <div className="chooseState_div1"></div>
                                     <div className="chooseState_div2"></div>
                                 </div>
@@ -86,20 +96,25 @@ class Part4 extends Component {
                                             <p className="diary_state_p">  隐私</p>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> */}
+                                <input className="chooseState_input" type="text" list="part4_body_state" placeholder="日记权限" />
+                                <datalist id="part4_body_state">
+                                    <option value="公开"></option>
+                                    <option value="隐私"></option>
+                                </datalist>
                             </div>
                         </div>
                     </div>
-                    <div className="part4_right">                       
+                    <div className="part4_right">
                         <img className="part4_right_logo1" src={part4_logo2} />
                         <div className="part4_history">
-                        <p className="part4_history_p1">我的历史</p>
+                            <p className="part4_history_p1">我的历史</p>
                             <ul>
                                 {
                                     this.state.part4_historyid.map((item, index) => {
                                         return (
                                             <li key={index}>
-                                               <p>{index+1}.{this.state.part4_historyvalue[index]}</p>
+                                                <p>{index + 1}.{this.state.part4_historyvalue[index]}</p>
                                             </li>
                                         )
                                     })
@@ -113,7 +128,7 @@ class Part4 extends Component {
                                     this.state.part4_hotid.map((item, index) => {
                                         return (
                                             <li key={index}>
-                                               <p>{index+1}.{this.state.part4_hotvalue[index]}</p>
+                                                <p>{index + 1}.{this.state.part4_hotvalue[index]}</p>
                                             </li>
                                         )
                                     })
@@ -126,85 +141,93 @@ class Part4 extends Component {
         );
     }
 
-    
-    chooseState(){
-        let This=this;
-        var chooseState_input = document.querySelector('.chooseState_input');
-        var diary_state=document.querySelector('.diary_state');
-        var chooseState_div1=document.querySelector('.chooseState_div1');
-        var chooseState_div2=document.querySelector('.chooseState_div2');
-        var diary_state_p=document.querySelector('.diary_state_p')
-        chooseState_input.onfocus=function(){
-            diary_state.style.display=('block');
-            chooseState_div1.display=('none');
-            chooseState_div2.display=('block');
-        }
-        chooseState_div1.onclick=function(){
-            diary_state.style.display=('block');
-            chooseState_div1.style.display=('none');
-            chooseState_div2.style.display=('block');
-        }
-        chooseState_div2.onclick=function(){
-            diary_state.style.display=('none');
-            chooseState_div1.style.display=('block');
-            chooseState_div2.style.display=('none');
-        }
-        var diary_state_ul=document.querySelector('.diary_state_ul');
-        var Li=diary_state_ul.getElementsByTagName('li');
-        for(var i=0;i<Li.length;i++){
-            Li[i].onmouseover = function(){
-                this.style.backgroundColor = '#aaaaaa';
-            }
-            Li[i].onmouseout = function(){
-                this.style.backgroundColor = '#ffffff';
-            }
-            Li[i].onclick = function(){
-                chooseState_input.value = this.querySelector('.diary_state_p').innerHTML;
-                diary_state.style.display = ('none');
-                chooseState_div1.style.display = ('block');
-                chooseState_div2.style.display = ('none');
-            }
-        }
-    }
-    chooseType(){
-        let This=this;
-        var chooseType_input = document.querySelector('.chooseType_input');
-        var diary_type=document.querySelector('.diary_type');
-        var chooseType_div1=document.querySelector('.chooseType_div1');
-        var chooseType_div2=document.querySelector('.chooseType_div2');
-        var diary_Type_p=document.querySelector('.diary_Type_p')
-        chooseType_input.onfocus=function(){
-            diary_type.style.display=('block');
-            chooseType_div1.style.display=('none');
-            chooseType_div2.style.display=('block');
-        }
-        chooseType_div1.onclick=function(){
-            diary_type.style.display=('block');
-            chooseType_div1.style.display=('none');
-            chooseType_div2.style.display=('block');
-        }
-        chooseType_div2.onclick=function(){
-            diary_type.style.display=('none');
-            chooseType_div1.style.display=('block');
-            chooseType_div2.style.display=('none');
-        }
-        var diary_type_ul=document.querySelector('.diary_type_ul');
-        var Li=diary_type_ul.getElementsByTagName('li');
-        for(var i=0;i<Li.length;i++){
-            Li[i].onmouseover = function(){
-                this.style.backgroundColor = '#aaaaaa';
-            }
-            Li[i].onmouseout = function(){
-                this.style.backgroundColor = '#ffffff';
-            }
-            Li[i].onclick = function(){
-                chooseType_input.value = this.querySelector('.diary_type_p').innerHTML;
-                diary_type.style.display = ('none');
-                chooseType_div1.style.display = ('block');
-                chooseType_div2.style.display = ('none');
-            }
-        }
+
+    // chooseState() {
+    //     let This = this;
+    //     var chooseState_input = document.querySelector('.chooseState_input');
+    //     var diary_state = document.querySelector('.diary_state');
+    //     var chooseState_div1 = document.querySelector('.chooseState_div1');
+    //     var chooseState_div2 = document.querySelector('.chooseState_div2');
+    //     var diary_state_p = document.querySelector('.diary_state_p')
+    //     chooseState_input.onfocus = function () {
+    //         diary_state.style.display = ('block');
+    //         chooseState_div1.display = ('none');
+    //         chooseState_div2.display = ('block');
+    //     }
+    //     chooseState_div1.onclick = function () {
+    //         diary_state.style.display = ('block');
+    //         chooseState_div1.style.display = ('none');
+    //         chooseState_div2.style.display = ('block');
+    //     }
+    //     chooseState_div2.onclick = function () {
+    //         diary_state.style.display = ('none');
+    //         chooseState_div1.style.display = ('block');
+    //         chooseState_div2.style.display = ('none');
+    //     }
+    //     var diary_state_ul = document.querySelector('.diary_state_ul');
+    //     var Li = diary_state_ul.getElementsByTagName('li');
+    //     for (var i = 0; i < Li.length; i++) {
+    //         Li[i].onmouseover = function () {
+    //             this.style.backgroundColor = '#aaaaaa';
+    //         }
+    //         Li[i].onmouseout = function () {
+    //             this.style.backgroundColor = '#ffffff';
+    //         }
+    //         Li[i].onclick = function () {
+    //             chooseState_input.value = this.querySelector('.diary_state_p').innerHTML;
+    //             diary_state.style.display = ('none');
+    //             chooseState_div1.style.display = ('block');
+    //             chooseState_div2.style.display = ('none');
+    //         }
+    //     }
+    // }
+
+
+    // chooseType() {
+    //     let This = this;
+    //     var chooseType_input = document.querySelector('.chooseType_input');
+    //     var diary_type = document.querySelector('.diary_type');
+    //     var chooseType_div1 = document.querySelector('.chooseType_div1');
+    //     var chooseType_div2 = document.querySelector('.chooseType_div2');
+    //     var diary_Type_p = document.querySelector('.diary_Type_p')
+    //     chooseType_input.onfocus = function () {
+    //         diary_type.style.display = ('block');
+    //         chooseType_div1.style.display = ('none');
+    //         chooseType_div2.style.display = ('block');
+    //     }
+    //     chooseType_div1.onclick = function () {
+    //         diary_type.style.display = ('block');
+    //         chooseType_div1.style.display = ('none');
+    //         chooseType_div2.style.display = ('block');
+    //     }
+    //     chooseType_div2.onclick = function () {
+    //         diary_type.style.display = ('none');
+    //         chooseType_div1.style.display = ('block');
+    //         chooseType_div2.style.display = ('none');
+    //     }
+    //     var diary_type_ul = document.querySelector('.diary_type_ul');
+    //     var Li = diary_type_ul.getElementsByTagName('li');
+    //     for (var i = 0; i < Li.length; i++) {
+    //         Li[i].onmouseover = function () {
+    //             this.style.backgroundColor = '#aaaaaa';
+    //         }
+    //         Li[i].onmouseout = function () {
+    //             this.style.backgroundColor = '#ffffff';
+    //         }
+    //         Li[i].onclick = function () {
+    //             chooseType_input.value = this.querySelector('.diary_type_p').innerHTML;
+    //             diary_type.style.display = ('none');
+    //             chooseType_div1.style.display = ('block');
+    //             chooseType_div2.style.display = ('none');
+    //         }
+    //     }
+    // }
+
+
+
+    part4Chooseimg(){
+        document.querySelector(".part4_chooseimg").click()
     }
 }
- 
+
 export default Part4;
