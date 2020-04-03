@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import './Home.css'
 import home_logo1 from '../img/home_logo1.png'
 import home_logo2 from '../img/home_logo2.png'
@@ -8,6 +9,7 @@ import diary_collect1 from '../img/diary_collect1.png'
 import diary_collect2 from '../img/diary_collect2.png'
 import userimg from '../img/userimg.jpg'
 import home_add from '../img/home_add.png'
+
 
 class Home extends Component {
     constructor(props) {
@@ -51,10 +53,10 @@ class Home extends Component {
             home_week: "",
             //////////////////
             home_hotvalue: [
-                "巴拉巴拉巴拉","巴拉巴拉巴拉","巴拉巴拉巴拉","巴拉巴拉巴拉","巴拉巴拉巴拉","黑暗深邃幻想"
+                "巴拉巴拉巴拉", "巴拉巴拉巴拉", "巴拉巴拉巴拉", "巴拉巴拉巴拉", "巴拉巴拉巴拉", "黑暗深邃幻想"
             ],
             home_hotid: [
-                "1","2","3","4","5","6"
+                "1", "2", "3", "4", "5", "6"
             ],
 
 
@@ -65,10 +67,10 @@ class Home extends Component {
             <div id="home">
                 <div id="home_bg">
                     <div className="home_head">
-                        <a className="home_head_a1">主页</a>
-                        <a className="home_head_a2">个人信息</a>
-                        <a className="home_head_a3">日迹</a>
-                        <a className="home_head_a4">退出</a>
+                        <Link to="/pages/Home"><a className="home_head_a1">主页</a></Link>
+                        <Link to="/pages/Personmessage"><a className="home_head_a2">个人信息</a></Link>
+                        <Link to="/pages/History"><a className="home_head_a3">日迹</a></Link>
+                        <Link to="/"><a className="home_head_a4">退出</a></Link>
                     </div>
                     <div className="home_choose">
                         <ul>
@@ -157,8 +159,8 @@ class Home extends Component {
                         </div>
                     </div>
                     <div className="home_right">
-                        <img className="home_add" src={home_add} />
-                        <a className="home_add_a">发布</a>
+                        <Link to="/pages/Part4"><img className="home_add" src={home_add} /></Link>
+                        <Link to="/pages/Part4"><a className="home_add_a">发布</a></Link>
                         <div className="home_right_div1">
                             <p className="home_time_p1">{this.state.home_day}</p>
                             <p className="home_time_p2">{this.state.home_week}</p>
@@ -173,7 +175,7 @@ class Home extends Component {
                                     this.state.home_hotid.map((item, index) => {
                                         return (
                                             <li key={index}>
-                                               <p>{index+1}.{this.state.home_hotvalue[index]}</p>
+                                                <p>{index + 1}.{this.state.home_hotvalue[index]}</p>
                                             </li>
                                         )
                                     })

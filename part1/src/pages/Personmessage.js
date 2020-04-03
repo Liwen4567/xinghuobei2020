@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import './Personmessage.css'
 import userimg from '../img/userimg.jpg'
 import personmessage_logo1 from '../img/personmessage_logo1.png'
@@ -39,10 +40,10 @@ class Personmessage extends Component {
             <div id="personmessage">
                 <div id="personmessage_bg">
                     <div className="personmessage_head">
-                        <a className="personmessage_head_a1">主页</a>
-                        <a className="personmessage_head_a2">个人信息</a>
-                        <a className="personmessage_head_a3">日迹</a>
-                        <a className="personmessage_head_a4">退出</a>
+                        <Link to="/pages/Home"><a className="personmessage_head_a1">主页</a></Link>
+                        <Link to="/pages/Personmessage"><a className="personmessage_head_a2">个人信息</a></Link>
+                        <Link to="/pages/History"><a className="personmessage_head_a3">日迹</a></Link>
+                        <Link to="/"><a className="personmessage_head_a4">退出</a></Link>
                     </div>
                     <div id="personmessage_message">
                         <div className="personmessage_userimg"
@@ -59,7 +60,7 @@ class Personmessage extends Component {
                         <p className="personmessage_p7">出生日期：{this.state.birthdata}</p>
                         <p className="personmessage_p8">注册日期：{this.state.registdata}</p>
                         <button className="personmessage_changrmessage" onClick={this.personmessagechangeOut.bind(this)}>修改个人信息</button>
-                        <button className="personmessage_quit">退出登录</button>
+                        <Link to="/"><button className="personmessage_quit">退出登录</button></Link>
                         <button className="personmessage_cancel">注销</button>
                         <button className="personmessage_changepsw" onClick={this.changepswOut.bind(this)}>修改密码</button>
                         <img src={personmessage_logo1} />
@@ -72,7 +73,7 @@ class Personmessage extends Component {
                                 return (
                                     <div className={"personmessage_photo" + index} key={index}
                                         style={{
-                                            backgroundImage: 'url(' + this.state.userphoto[index] + ')' 
+                                            backgroundImage: 'url(' + this.state.userphoto[index] + ')'
                                         }}
                                     ></div>
                                 )
@@ -103,7 +104,7 @@ class Personmessage extends Component {
                         <p className="personmessage_change_body_p3">个性标签：</p>
                         <input className="personmessage_change_body_input3" type="text" value={this.state.tag} onChange={this.personmessageChange3.bind(this)} />
                         <p className="personmessage_change_body_p4">QQ：</p>
-                        <input className="personmessage_change_body_input4" type="text" value={this.state.qq} onChange={this.personmessageChange4.bind(this)}/>
+                        <input className="personmessage_change_body_input4" type="text" value={this.state.qq} onChange={this.personmessageChange4.bind(this)} />
                         <p className="personmessage_change_body_p5">出生日期：</p>
                         <input className="personmessage_change_body_input5" type="text" value={this.state.birthdata} onChange={this.personmessageChange5.bind(this)} />
                         <p className="personmessage_change_body_p6">注册时间：</p>
@@ -121,7 +122,7 @@ class Personmessage extends Component {
             </div>
         );
     }
-    
+
     homewordBack() {
         document.querySelector("#Homeword_bg").style.display = "none"
     }
@@ -203,7 +204,7 @@ class Personmessage extends Component {
             message: e.target.value
         })
     }
-    
+
 
     componentDidMount() {
         let This = this
@@ -292,7 +293,7 @@ class Personmessage extends Component {
         //         }else{
         //             alert(response.data.code)
         //         }
-                
+
         //     })
         //     .catch(function (error) {
         //         console.log(error)

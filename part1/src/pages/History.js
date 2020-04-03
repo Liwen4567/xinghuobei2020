@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import './History.css'
 import userimg from '../img/userimg.jpg'
 import home_logo1 from '../img/home_logo1.png'
@@ -54,10 +55,10 @@ class History extends Component {
             <div id="history">
                 <div id="history_bg">
                     <div className="history_head">
-                        <a className="history_head_a1">主页</a>
-                        <a className="history_head_a2">个人信息</a>
-                        <a className="history_head_a3">日迹</a>
-                        <a className="history_head_a4">退出</a>
+                        <Link to="/pages/Home"><a className="history_head_a1">主页</a></Link>
+                        <Link to="/pages/Personmessage"><a className="history_head_a2">个人信息</a></Link>
+                        <Link to="/pages/History"><a className="history_head_a3">日迹</a></Link>
+                        <Link to="/"><a className="history_head_a4">退出</a></Link>
                     </div>
                     <div className="history_personmessage">
                         <div className="history_userimg"
@@ -68,7 +69,7 @@ class History extends Component {
                         <p className="history_username">{this.state.username}</p>
                         <p className="history_usertag">个性标签:{this.state.tag}</p>
                         <button className="history_mycollect" onClick={this.myCollect.bind(this)}>我的收藏</button>
-                        <button className="history_write"></button>
+                        <Link to="/pages/Part4"><button className="history_write"></button></Link>
                         <img src={home_logo1} />
                     </div>
                     <div className="history_choose">
@@ -196,13 +197,13 @@ class History extends Component {
         }
     }
 
-    myCollect(e){
+    myCollect(e) {
         ///////////////////////切换收藏与历史
         let This = this
-        if(a == 0){
+        if (a == 0) {
             e.target.style.background = "#2996fe"
             a = 1
-        }else if(a == 1){
+        } else if (a == 1) {
             e.target.style.background = "transparent"
             a = 0
         }
